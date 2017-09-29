@@ -4,13 +4,13 @@ import java.util.ArrayList;
 
 public class Castle {
 	public static void main(String[] args) {
-		int[] test = new int[] {1,2,2,3,3,3,3,3,2,1,4,5,6,2};
+		int[] test = new int[] {1,2,2,3,3,3,3,-1,2,1,4,5,6,2};
 		Castle temp = new Castle();
 		temp.buildCastle(test);
 	}
 	public void buildCastle (int[] input ){
 		ArrayList<Integer> temp = new ArrayList<Integer>() ;
-		for ( int i = 0; i < input.length -1  ; i++){
+		for ( int i = 0; i < input.length -1  ; i++){ //removes repeating numbers from the array
 			if(input[i] != input[i+1]){
 				temp.add(input[i]);
 			}

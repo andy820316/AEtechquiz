@@ -33,21 +33,17 @@ public class TransformerBattle {
         BufferedReader br = null;
         String line = "";
         String cvsSplitBy = ",";
+        // read from csv in the format of name, fraction, str, int, spd, endur, rank, courage,firepower,skill
 
         try {
-
             br = new BufferedReader(new FileReader(csvFile));
             while ((line = br.readLine()) != null) {
-
                 // use comma as separator
                 String[] input = line.split(cvsSplitBy);
-
                 transformers.add(new Transformer(input[0],input[1],Integer.parseInt(input[2]),
                 		Integer.parseInt(input[3]),Integer.parseInt(input[4]),Integer.parseInt(input[5]),
                 		Integer.parseInt(input[6]), Integer.parseInt(input[7]), Integer.parseInt(input[8]), Integer.parseInt(input[9])));
             }
-
-
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {

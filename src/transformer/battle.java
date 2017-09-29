@@ -122,20 +122,20 @@ public class battle {
 			return -1;
 		}
 
-		if( t_a.getCourage() >= t_d.getCourage()+4 && t_a.getStr() >= t_d.getStr()+3 ){
+		if( t_a.getCourage() >= t_d.getCourage()+4 && t_a.getStr() >= t_d.getStr()+3 ){ //down 4 or more points of courage and 3 or more points of strength
 			System.out.println(t_d.getName() + " has fled the battle");
 			return 1;
 		}else if(t_d.getCourage() >= t_a.getCourage()+4 && t_d.getStr() >= t_a.getStr()+3){
 			System.out.println(t_a.getName() + " has fled the battle");
 			return -1;
 		}else if(t_a.getSkill() >= t_d.getSkill()+3){
-			System.out.println(t_a.getName() + " has better skills than " + t_d.getName());
+			System.out.println(t_a.getName() + " has better skills than " + t_d.getName()); // up 3 or more in skill
 			return 1;
 		}else if(t_d.getSkill() >= t_a.getSkill()+3){
 			System.out.println(t_d.getName() + " has better skills than "  + t_a.getName());
 			return -1;
 		}else if(t_a.getOverall() > t_d.getOverall()){
-			System.out.println(t_a.getName() + " has a higher overall stats than "  + t_d.getName());
+			System.out.println(t_a.getName() + " has a higher overall stats than "  + t_d.getName()); // overall stats
 			return 1;
 		}else if(t_d.getOverall() > t_a.getOverall()){
 			System.out.println(t_d.getName() + " has a higher overall stats than "  + t_a.getName());
