@@ -30,7 +30,7 @@ public class battle {
 		System.out.println("Autobots have : " + autobots.size() + " combatants");
 		for(int i = 0; i < rounds;i++){
 			System.out.println("Battle #"+(i+1)+" !!!!!");
-			result = battle(autobots.get(i),decepticons.get(i)); // retrieves result of battle between two transformers
+			result = fight(autobots.get(i),decepticons.get(i)); // retrieves result of battle between two transformers
 			if(result == 1){
 				autoVictories++;
 				survivors.add(autobots.get(i));
@@ -109,7 +109,7 @@ public class battle {
 	}
 	//compares two transformers and returns 1 if autobots win,
 	//-1 if decepticon wins, 9 if tie and 0 in the case of PredaKing vs Optimus Prime
-	public int battle(Transformer t_a, Transformer t_d){ 
+	public int fight(Transformer t_a, Transformer t_d){ 
 		if(t_a.getName().equals("Optimus Prime")){//Check if optimus is fighting
 			if(t_d.getName().equals("PredaKing")){ // Check if predaking is fighting optimus
 				return 0;
